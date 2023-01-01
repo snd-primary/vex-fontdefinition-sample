@@ -17,7 +17,7 @@ export const styles = {
       color: "white",
       fontStyle: "italic"
     },
-    //ここで定義すれば、JSXがCSSまみれにならないで済む。
+    //ここで呼び出せば、JSXがCSSまみれにならないで済む。
     Typography({
       letterSp: "wider",
       fontFamily: "sourceCodePro"
