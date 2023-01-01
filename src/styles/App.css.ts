@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css"
-import { globalVars, space } from "./globalvars.css"
+import { space } from "./globalvars.css"
+import { Typography } from "./recipe/typography.css"
 
 export const styles = {
   fontdemo: style({
@@ -8,15 +9,18 @@ export const styles = {
   fontdemo_item: style({
     padding: `${space[16]} 0`
   }),
-  title_bg: style({
-    background: "black",
-    display: "grid",
-    padding: `${space[4]} ${space[8]}`,
-    placeSelf: "center",
-    width: "fit-content"
-  }),
-  title: style({
-    color: "white",
-    fontStyle: "italic"
-  })
+  title: style([
+    {
+      display: "inline-block",
+      padding: `${space[4]} ${space[8]}`,
+      background: "black",
+      color: "white",
+      fontStyle: "italic"
+    },
+    //ここで定義すれば、JSXがCSSまみれにならないで済む。
+    Typography({
+      letterSp: "wider",
+      fontFamily: "sourceCodePro"
+    })
+  ])
 }

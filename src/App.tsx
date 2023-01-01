@@ -1,7 +1,6 @@
 import "./styles/preflight.css"
 import { Typography } from "./styles/recipe/typography.css"
 import { styles } from "./styles/App.css"
-import classnames from "classnames"
 import "@fontsource/source-code-pro/400.css"
 import "@fontsource/source-code-pro/600.css"
 import "@fontsource/source-code-pro/700.css"
@@ -12,22 +11,11 @@ import "@fontsource/zen-kaku-gothic-new/700.css"
 const App = () => {
   return (
     <div className={styles.fontdemo}>
-      <span className={styles.title_bg}>
-        <p
-          className={classnames(
-            styles.title,
-            Typography({
-              letterSp: "wider"
-            })
-          )}
-        >
-          vanilla-extract font definition example
-        </p>
-      </span>
+      <p className={styles.title}>vanilla-extract font definition example</p>
       <div className={styles.fontdemo_item}>
         <h1
           className={Typography({
-            fontSizes: "h1",
+            fontSizes: "heading1",
             fontWeight: "bold"
           })}
         >
@@ -35,7 +23,7 @@ const App = () => {
         </h1>
         <h1
           className={Typography({
-            fontSizes: "h1",
+            fontSizes: "heading1",
             fontWeight: "bold",
             fontFamily: "sourceCodePro"
           })}
@@ -46,7 +34,7 @@ const App = () => {
       <div className={styles.fontdemo_item}>
         <h2
           className={Typography({
-            fontSizes: "h2",
+            fontSizes: "heading2",
             fontWeight: "bold"
           })}
         >
@@ -54,7 +42,7 @@ const App = () => {
         </h2>
         <h2
           className={Typography({
-            fontSizes: "h2",
+            fontSizes: "heading2",
             fontWeight: "bold",
             fontFamily: "sourceCodePro"
           })}
@@ -65,7 +53,7 @@ const App = () => {
       <div className={styles.fontdemo_item}>
         <h3
           className={Typography({
-            fontSizes: "h3",
+            fontSizes: "heading3",
             fontWeight: "bold"
           })}
         >
@@ -73,7 +61,7 @@ const App = () => {
         </h3>
         <h3
           className={Typography({
-            fontSizes: "h3",
+            fontSizes: "heading3",
             fontWeight: "semibold",
             fontFamily: "sourceCodePro"
           })}
@@ -84,7 +72,7 @@ const App = () => {
       <div className={styles.fontdemo_item}>
         <h4
           className={Typography({
-            fontSizes: "h4",
+            fontSizes: "heading4",
             fontWeight: "bold"
           })}
         >
@@ -92,7 +80,7 @@ const App = () => {
         </h4>
         <h4
           className={Typography({
-            fontSizes: "h4",
+            fontSizes: "heading4",
             fontWeight: "semibold",
             fontFamily: "sourceCodePro"
           })}
