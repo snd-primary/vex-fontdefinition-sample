@@ -6,16 +6,16 @@ export const Typography = recipe({
   variants: {
     fontSizes: {
       h1: {
-        fontSize: "clamp(2rem, 2vw, 4rem)"
+        fontSize: `clamp(${globalVars.fontSizes["4xl"]}, 6.5vw, ${globalVars.fontSizes["5xl"]})`
       },
       h2: {
-        fontSize: `clamp(${globalVars.fontSizes["3xl"]}, 6vw, ${globalVars.fontSizes["4xl"]})`
+        fontSize: `clamp(${globalVars.fontSizes["3xl"]}, 5.1vw, ${globalVars.fontSizes["4xl"]})`
       },
       h3: {
-        fontSize: `clamp(${globalVars.fontSizes["2xl"]}, 5vw, ${globalVars.fontSizes["3xl"]})`
+        fontSize: `clamp(${globalVars.fontSizes["2xl"]}, 4.5vw, ${globalVars.fontSizes["3xl"]})`
       },
       h4: {
-        fontSize: `clamp(${globalVars.fontSizes.xl}, 5vw, ${globalVars.fontSizes["2xl"]})`
+        fontSize: `clamp(${globalVars.fontSizes.xl}, 3.5vw, ${globalVars.fontSizes["2xl"]})`
       },
       p: {
         fontSize: `clamp(${globalVars.fontSizes.sm}, 2.5vw, ${globalVars.fontSizes.base})`
@@ -80,12 +80,33 @@ export const Typography = recipe({
       widest: {
         letterSpacing: globalVars.letterSpacings.widest
       }
+    },
+    lineHeight: {
+      none: {
+        lineHeight: globalVars.lineHeights.none
+      },
+      tight: {
+        lineHeight: globalVars.lineHeights.tight
+      },
+      sung: {
+        lineHeight: globalVars.lineHeights.snug
+      },
+      normal: {
+        lineHeight: globalVars.lineHeights.normal
+      },
+      relaxed: {
+        lineHeight: globalVars.lineHeights.relaxed
+      },
+      loose: {
+        lineHeight: globalVars.lineHeights.loose
+      }
     }
   },
   defaultVariants: {
     fontFamily: "zenKakuGothicNew",
     letterSp: "wide",
-    fontWeight: "normal"
+    fontWeight: "normal",
+    lineHeight: "sung"
   }
 })
 

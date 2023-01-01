@@ -1,5 +1,8 @@
 import { createGlobalTheme } from "@vanilla-extract/css"
 
+export const grid: number = 4
+const px = (value: string | number) => `${value}px`
+
 export const globalVars = createGlobalTheme(":root", {
   fonts: {
     zenKakuGothicNew: 'Zen Kaku Gothic New, "Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif',
@@ -13,7 +16,7 @@ export const globalVars = createGlobalTheme(":root", {
     xl: "1.3rem",
     "2xl": "1.5rem",
     "3xl": "1.875rem",
-    "4xl": "2.5rem",
+    "4xl": "2.25rem",
     "5xl": "3rem",
     "6xl": "3.75rem",
     "7xl": "4.5rem",
@@ -37,15 +40,7 @@ export const globalVars = createGlobalTheme(":root", {
     snug: "1.375",
     normal: "1.5",
     relaxed: "1.625",
-    loose: "2",
-    3: ".75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    7: "1.75rem",
-    8: "2rem",
-    9: "2.25rem",
-    10: "2.5rem"
+    loose: "2"
   },
   letterSpacings: {
     tighter: "-0.05em",
@@ -54,7 +49,25 @@ export const globalVars = createGlobalTheme(":root", {
     wide: "0.025em",
     wider: "0.05em",
     widest: "0.1em"
+  },
+  grid: px(grid),
+  space: {
+    none: "0",
+    auto: "auto",
+    2: px(2),
+    4: px(1 * grid),
+    6: px(6),
+    8: px(2 * grid),
+    12: px(3 * grid),
+    16: px(4 * grid),
+    20: px(5 * grid),
+    24: px(6 * grid),
+    28: px(7 * grid),
+    32: px(8 * grid),
+    48: px(12 * grid),
+    64: px(16 * grid),
+    96: px(24 * grid)
   }
 })
 
-export const { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } = globalVars
+export const { fonts, fontSizes, fontWeights, lineHeights, letterSpacings, space } = globalVars
